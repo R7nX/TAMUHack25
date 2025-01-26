@@ -5,6 +5,7 @@ import styles from "./budget.module.css";
 import Header from "../../components/header"
 import Footer from '../../components/footer'
 import Head from "next/head";
+import Script from "next/script";
 
 export default function Budget() {
   const [income, setIncome] = useState(0);
@@ -106,16 +107,25 @@ export default function Budget() {
                     className={styles.filledBar}
                     style={{
                       width: `${percentage}%`,
-                      backgroundColor: percentage > 100 ? "red" : "green",
+                      backgroundColor: `${percentage}%` > 100 ? "red" : "green",
                     }}
                   ></div>
+                  <script>
+                  </script>
                 </div>
                 {percentage > 100 && <p className={styles.warningText}>Over Budget!</p>}
+                <div>
+                <p id={category}>
+                </p>
+                </div>
               </div>
             );
+
           })}
         </div>
       </section>
+
+      
       <Footer />
     </div>
   );

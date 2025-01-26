@@ -1,0 +1,26 @@
+/* General Page Styles */
+.container {
+    font-family: Arial, sans-serif;
+    background-color: #2e2e2e;
+  }
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(rgba(43, 43, 43, 0.57), rgba(0, 0, 0, 0.9)),url("../../public/image/stock.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
