@@ -110,13 +110,13 @@ export default function Budget() {
                     className={styles.filledBar}
                     style={{
                       width: `${percentage}%`,
-                      backgroundColor: `${percentage}%` > 100 ? "red" : "green",
+                      backgroundColor: spent > budget ? "red" : "green",
                     }}
                   ></div>
                   <script>
                   </script>
                 </div>
-                {percentage > 100 && <p className={styles.warningText}>Over Budget!</p>}
+                  {spent > budget && <p className={styles.warningText}>Over Budget!</p>}
                 <div>
                 <p id={category}>
                 </p>
@@ -126,6 +126,7 @@ export default function Budget() {
 
           })}
         </div>
+        <br></br>
         <h2>
           Net Profit: ${income-hold.needs-hold.wants-hold.savings}
         </h2>
