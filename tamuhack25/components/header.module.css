@@ -1,6 +1,5 @@
 /* Header Container */
 .header {
-  margin-top: 20px;
   display: flex;
   flex-direction: column; /* Stack title and nav vertically */
   align-items: center; /* Center-align title and nav */
@@ -9,7 +8,6 @@
   padding: 10px 20px;
   background-color: #500000; /* Blue background for header */
   color: white; /* White text */
-  border-bottom: 4px solid #2563eb; /* Add a decorative bottom border */
 }
 
 /* Title Styling */

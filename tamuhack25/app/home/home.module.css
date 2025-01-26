@@ -7,10 +7,12 @@
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  background-image: linear-gradient(rgba(43, 43, 43, 0.57), rgba(0, 0, 0, 0.9)),url("../../public/image/stock.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
   text-align: center;
-  padding: 80px 20px;
+  padding: 40px 20px;
 }
 
 .hero h1 {
