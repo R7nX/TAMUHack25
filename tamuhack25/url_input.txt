@@ -1,1 +1,1 @@
-https://finnhub.io/api/news?id=e1a28e98a947da469f95e2773d5b14ad45324702d9e9b0c031addc7b6bc3df90
+https://finnhub.io/api/news?id=85e7f934f03bf89e7156c94f9b074abf0de9b4f5d05551200889240b2e23579f

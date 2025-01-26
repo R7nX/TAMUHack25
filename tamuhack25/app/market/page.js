@@ -4,10 +4,6 @@ import { useState } from "react";
 import Header from '../../components/header'
 import Footer from '../../components/footer'
 
-import Header from "../../components/header"
-import Footer from '../../components/footer'
-
-
 export default function Market() {
   const [ticker, setTicker] = useState("");
   const [news, setNews] = useState([]);
