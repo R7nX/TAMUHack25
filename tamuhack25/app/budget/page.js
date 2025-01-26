@@ -116,7 +116,7 @@ export default function Budget() {
                   <script>
                   </script>
                 </div>
-                  {spent > budget > 100 && <p className={styles.warningText}>Over Budget!</p>}
+                  {spent > budget && <p className={styles.warningText}>Over Budget!</p>}
                 <div>
                 <p id={category}>
                 </p>
