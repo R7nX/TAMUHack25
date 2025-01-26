@@ -8,6 +8,7 @@ import finnhub from 'finnhub'
 
 let companyName = Array(5).fill('');
 let companyStockData = Array(5).fill('');
+let companyQuote = Array(5).fill('');
 
 
 export default function Home() {
@@ -34,10 +35,17 @@ export default function Home() {
     setValues(updatedValues);
     finnhubClient.recommendationTrends(value, (error, data, response) => {
         companyStockData[index] = data[0];
+        document.getElementById((index+4)*2).textContent= (companyStockData[index].buy+companyStockData[index].strongBuy) + " Buy/ "+ companyStockData[index].hold+" Hold";
+      });
+    finnhubClient.quote(value, (error, data, response) => {
+        companyQuote[index] = data;
+        document.getElementById((index+9)*2).textContent= "$"+(companyQuote[index].c)+" (Low: $"+companyQuote[index].l+" High: $"+companyQuote[index].h+")";
       });
     finnhubClient.companyProfile2({'symbol': value}, (error, data, response) => {
         document.getElementById(index).textContent=data.name;
+        
       });
+    
     };
 
     
@@ -49,7 +57,7 @@ export default function Home() {
         <div className={styles.container}>
             <section className={styles.hero}>
                 <h1>Track the market</h1>
-                <p>heh placeholder text.</p>
+                <p>Compare different stock.</p>
             </section>
         <h2 style={{textAlign:"center"}} >Track companies</h2>
         </div>
@@ -66,6 +74,8 @@ export default function Home() {
                 style={{ textTransform: 'uppercase' }}
                 />
                 <p id={idx}></p>
+                <p id={(idx+4)*2}></p>
+                <p id={(idx+9)*2}></p>
             </div>
         ))}
         </div>
