@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import data from "./sample.json";
+import Header from '../../components/header'
+import Footer from '../../components/footer'
 
 export default function OutputPage() {
   const [output, setOutput] = useState("");
@@ -25,15 +27,20 @@ export default function OutputPage() {
   }, []);
 
   return (
-    <div style={{ maxWidth: "800px", margin: "0 auto", padding: "20px" }}>
-      <h1>Analysis Result</h1>
+    <div>
+      <Header />
+      <h1 style={{maxWidth: "1000px", display: "block", marginLeft: "auto", marginRight : "auto"}}>Analysis Result</h1>
       {output ? (
         <pre
           style={{
             whiteSpace: "pre-wrap",
-            backgroundColor: "red",
-            padding: "10px",
-            borderRadius: "5px",
+            backgroundColor: "#2e2e2e",
+            padding: "20px",
+            borderRadius: "10px",
+            maxWidth: "1000px",
+            display: "block",
+            marginLeft: "auto",     
+            marginRight : "auto"
           }}
         >
           {output}
@@ -42,11 +49,17 @@ export default function OutputPage() {
         <p>Loading...</p>
       )}
       <button
-        style={{ marginTop: "20px" }}
+        style={{ marginTop: "20px",
+          display: "block",
+          marginLeft: "auto",     
+          marginRight : "auto",
+        height: "50px",
+        width: "90px",}}
         onClick={() => router.push("/")} // Redirect back to the home page
       >
         Go Back
       </button>
+      <Footer />
     </div>
   );
 }
