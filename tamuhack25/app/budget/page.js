@@ -126,6 +126,7 @@ export default function Budget() {
 
           })}
         </div>
+        <br></br>
         <h2>
           Net Profit: ${income-hold.needs-hold.wants-hold.savings}
         </h2>
