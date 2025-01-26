@@ -8,13 +8,13 @@ const Header = () =>{
       <br></br>
       <nav className="flex space-x-4">
         <Link href="/home">
-          <a className="hover:underline">Home</a>
+          Home
         </Link>
         <Link href="/budget">
-          <a className="hover:underline">Budget</a>
+          Budget
         </Link>
         <Link href="/market">
-          <a className="hover:underline">Market</a>
+          Market
         </Link>
       </nav>
       <br></br>
