@@ -60,23 +60,27 @@ export default function Market() {
   return (
     <div style={{ padding: "20px", margin: "0 auto" }}>
       <Header />
-      <h1 style={{ padding: "40px", margin: "0 auto" }}>Market Page</h1>
-      <p style={{ padding: "40px", margin: "0 auto" }}>Enter a stock ticker to get the latest news and analyze sentiment.</p>
+      <div style={{marginLeft:"75px"}}>
+      <h1>Market Page</h1>
+      <p>Enter a stock ticker to get the latest news and analyze sentiment.</p>
       <input
         type="text"
         value={ticker}
         onChange={(e) => setTicker(e.target.value)}
         placeholder="Enter stock ticker (e.g., AAPL)"
+        maxLength={4}
         style={{
+          padding: "10px",
           marginRight: "10px",
           width: "300px",
           fontSize: "16px",
+          textTransform: 'uppercase',
         }}
       />
-      <button onClick={fetchNews} disabled={loading}>
+      <button onClick={fetchNews} disabled={loading} width="50px">
         {loading ? "Loading..." : "Get News"}
       </button>
-      
+      </div>
 
       {news.length > 0 && (
         <div>
@@ -103,7 +107,6 @@ export default function Market() {
           </ul>
         </div>
       )}
-      
 
       {analysis && (
         <div>
@@ -112,7 +115,6 @@ export default function Market() {
             The article at <a href={analysis.url}>{analysis.url}</a> is{" "}
             <strong>{analysis.result}</strong>.
           </p>
-          
         </div>
       )}
       <Footer />
