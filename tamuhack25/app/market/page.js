@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Header from '../../components/header'
+import Footer from '../../components/footer'
 
 import Header from "../../components/header"
 import Footer from '../../components/footer'
@@ -60,11 +62,18 @@ export default function Market() {
   };
 
   return (
+<<<<<<< HEAD
     
     <div style={{ maxWidth: "800px", margin: "0" }}>
       <Header />
       <h1>Market Page</h1>
       <p>Enter a stock ticker to get the latest news and analyze sentiment.</p>
+=======
+    <div style={{ padding: "20px", margin: "0 auto" }}>
+      <Header />
+      <h1 style={{ padding: "40px", margin: "0 auto" }}>Market Page</h1>
+      <p style={{ padding: "40px", margin: "0 auto" }}>Enter a stock ticker to get the latest news and analyze sentiment.</p>
+>>>>>>> 2782f965d6177bd41024e77ac4219373cf283287
       <input
         type="text"
         value={ticker}
@@ -118,7 +127,10 @@ export default function Market() {
           
         </div>
       )}
+<<<<<<< HEAD
       
+=======
+>>>>>>> 2782f965d6177bd41024e77ac4219373cf283287
       <Footer />
     </div>
   );
