@@ -6,7 +6,7 @@ const Header = () =>{
         <header className={styles.header}>
       <h1 className="text-xl font-bold">My App</h1>
       <br></br>
-      <nav className="flex space-x-4">
+      <nav className={styles.nav}>
         <Link href="/home">
           <a className="hover:underline">Home</a>
         </Link>

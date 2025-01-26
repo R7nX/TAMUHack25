@@ -3,3 +3,9 @@
     justify-content: center;
     text-align: center;
   }
+
+.nav{
+  display: grid;
+  grid-auto-flow : column;
+  font-weight: bold;
+}
