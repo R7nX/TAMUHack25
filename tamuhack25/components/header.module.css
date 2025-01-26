@@ -23,7 +23,7 @@
 .nav {
   display: grid;
   grid-auto-flow: column; /* Horizontal navigation layout */
-  gap: 20px; /* Space between links */
+  gap: 100px; /* Space between links */
   font-weight: bold;
 }
 
