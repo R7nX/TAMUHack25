@@ -3,6 +3,7 @@
 import { useState } from "react";
 import styles from "./budget.module.css";
 import Header from "../../components/header"
+import Footer from '../../components/footer'
 import Head from "next/head";
 
 export default function Budget() {
@@ -115,6 +116,7 @@ export default function Budget() {
           })}
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

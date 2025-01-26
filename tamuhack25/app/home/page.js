@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Header from '../../components/header'
+import Footer from '../../components/footer'
 import styles from './home.module.css'
 
 export default function Home() {
@@ -41,12 +42,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className={styles.footer}>
-          <p>&copy; 2025 My App. All rights reserved.</p>
-        </footer>
       </div>
+      <Footer />
     </>
   );
 }
