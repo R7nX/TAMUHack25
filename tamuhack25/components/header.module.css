@@ -1,5 +1,12 @@
 .header {
+    margin-top: 20px;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
   }
+
+.nav{
+  display: grid;
+  grid-auto-flow : column;
+  font-weight: bold;
+}
