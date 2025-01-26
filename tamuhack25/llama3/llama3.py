@@ -6,7 +6,9 @@ import json
 from newspaper import Article, Config
 import requests
 import sys
+from tkinter import *
 
+answer = ""
 
 def getArticleContent(url):
     # prevent being block from page
@@ -78,6 +80,11 @@ def main():
     response_body = json.loads(response.get('body').read())['generation']
 
     print(response_body)
+    # output_file_path = "C:/Users/baoph/OneDrive - University of Utah/Documents/tamuHack/TAMUHack25/tamuhack25/output.txt"
+    # with open(output_file_path, "w") as file:
+    #     file.write(response_body)
+
+    # print(f"Response written to {output_file_path}")
 
 
 if __name__ == "__main__":
