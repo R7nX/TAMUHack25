@@ -5,6 +5,7 @@ import boto3
 import json
 from newspaper import Article, Config
 import requests
+import sys
 
 
 def getArticleContent(url):
@@ -22,11 +23,30 @@ def getArticleContent(url):
 
 def main():
     # url = 'https://www.benzinga.com/25/01/43198886/apples-q1-earnings-might-not-miss-a-beat-even-as-iphone-sales-stumble-analyst'
+    # if len(sys.argv) < 2:
+    #     print("Usage: python llama3.py <url>")
+    #     return
+    # url = sys.argv[1]
     if len(sys.argv) < 2:
-        print("Usage: python llama3.py <url>")
+        print("Error: File path argument is missing")
         return
-     url = sys.argv[1]
-     print("URL:",url)
+
+    file_path = sys.argv[1]
+
+    try:
+        # Read the URL from the file
+        with open(file_path, "r") as file:
+            url = file.read().strip()
+
+        if not url:
+            print("Error: URL file is empty")
+            return
+
+        # Print the URL to the command line
+        print(f"Received URL: {url}")
+
+    except Exception as e:
+        print(f"Error reading the file: {str(e)}")
 
     # text = "Apple AAPL-0.39% stock has tumbled at the start of the year. BofA Securities advises investors to stay the course but joined a chorus of Wall Street voices expressing concern over flagging iPhone demand. The iPhone is by far Apple’s most important product as it brings in the most revenue. Any drop in iPhone sales is a concern for investors. Wamsi Mohan lowered his price target on Apple shares to $253 from $256 on Friday, while maintaining a Buy rating on the stock. Shares were down 0.6% to $222 in afternoon trading. The stock gained 16% over the past 12 months, is down 11% in January. Mohan wrote that he expects weaker iPhone demand and a prolonged rollout of generative artificial intelligence features to affect sales in the current quarter."
     text = getArticleContent(url) 
