@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <h1 className={styles.title}>My App</h1>
+      <h1 className={styles.title}>Howdy Stock</h1>
       <nav className={styles.nav}>
         <Link href="/home">Home</Link>
         <Link href="/budget">Budget</Link>

@@ -42,8 +42,8 @@ export default function Home() {
         document.getElementById((index+9)*2).textContent= "$"+(companyQuote[index].c)+" (Low: $"+companyQuote[index].l+" High: $"+companyQuote[index].h+")";
       });
     finnhubClient.companyProfile2({'symbol': value}, (error, data, response) => {
-        document.getElementById(index).textContent=data.name;
-        
+        companyName[index] = data.name;
+        document.getElementById(index).textContent=companyName[index];
       });
     
     };
