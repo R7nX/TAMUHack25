@@ -11,6 +11,7 @@ export default function Budget() {
   const [income, setIncome] = useState(0);
   const [expenses, setExpenses] = useState([]);
   const [categoryBudgets, setCategoryBudgets] = useState({ needs: 0, wants: 0, savings: 0 });
+  const [hold] = useState({ needs: 0, wants: 0, savings: 0 });
 
   const handleIncomeChange = (e) => {
     const value = parseFloat(e.target.value) || 0;
@@ -96,6 +97,8 @@ export default function Budget() {
             const budget = categoryBudgets[category];
             const percentage = Math.min((spent / budget) * 100, 100);
 
+            hold[category] = spent;
+
             return (
               <div key={category} className={styles.progressCard}>
                 <h3>
@@ -123,7 +126,11 @@ export default function Budget() {
 
           })}
         </div>
+        <h2>
+          Net Profit: ${income-hold.needs-hold.wants-hold.savings}
+        </h2>
       </section>
+
 
       
       <Footer />
