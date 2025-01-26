@@ -10,7 +10,7 @@ export default function Home() {
       <div className={styles.container}>
         {/* Hero Section */}
         <section className={styles.hero}>
-          <h1>Welcome to My App</h1>
+          <h1>Welcome to Howdy Stock</h1>
           <p>Simplify your budgeting, explore the market, and stay in control.</p>
           <Link href="/budget" className={styles.ctaButton}>
             Get Started
@@ -35,7 +35,7 @@ export default function Home() {
             </div>
             {/* Feature 3 */}
             <div className={styles.featureCard}>
-              <Image src="/analytics-icon.svg" alt="Analytics" width={60} height={60} />
+              <Image src="/icons/analytics-icon.png" alt="Analytics" width={60} height={60} />
               <h3>Analytics</h3>
               <p>Gain actionable insights with powerful analytics.</p>
             </div>
