@@ -1,7 +1,7 @@
 /* General Page Styles */
 .container {
   font-family: Arial, sans-serif;
-  background-color: #f7fafc;
+  background-color: #2e2e2e;
   min-height: 100vh;
 }
 
@@ -50,7 +50,7 @@
 .features h2 {
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 40px;
 }
 
@@ -61,7 +61,7 @@
 }
 
 .featureCard {
-  background: white;
+  background: rgb(26, 26, 26);
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -78,18 +78,20 @@
   margin-bottom: 20px;
   width: 60px;
   height: 60px;
+  filter: invert(100%);
+  
 }
 
 .featureCard h3 {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #1a202c;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
 .featureCard p {
   font-size: 0.9rem;
-  color: #4a5568;
+  color: #ffffff;
 }
 
 /* Footer Section */

@@ -96,6 +96,7 @@
 /* Progress Section */
 .progressSection {
   margin: 40px 0;
+  text-align: center;
 }
 
 .progressGrid {
