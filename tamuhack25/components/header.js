@@ -20,12 +20,13 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <h1 className={styles.title}>My App</h1>
+      <h1 className={styles.title}>Howdy!</h1>
       <nav className={styles.nav}>
         <Link href="/home">Home</Link>
         <Link href="/budget">Budget</Link>
         <Link href="/market">Market</Link>
         <Link href="/compare">Compare</Link>
+        <Link href="/output">Output</Link>
         {!isLoggedIn ? (
           <Link href="/login" className={styles.loginButton}>
             Login

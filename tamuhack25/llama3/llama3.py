@@ -79,12 +79,16 @@ def main():
     response = bedrock_runtime.invoke_model(**kwargs)
     response_body = json.loads(response.get('body').read())['generation']
 
-    print(response_body)
-    # output_file_path = "C:/Users/baoph/OneDrive - University of Utah/Documents/tamuHack/TAMUHack25/tamuhack25/output.txt"
-    # with open(output_file_path, "w") as file:
-    #     file.write(response_body)
+    output_data = {
+        "analysis": response_body
+    }
 
-    # print(f"Response written to {output_file_path}")
+    # Define the JSON output file path
+    output_file_path = "C:/Users/baoph/OneDrive - University of Utah/Documents/tamuHack/TAMUHack25/tamuhack25/app/output/sample.json"
+
+    # Write the JSON data to the file
+    with open(output_file_path, "w") as file:
+        json.dump(output_data,file)
 
 
 if __name__ == "__main__":

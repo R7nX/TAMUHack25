@@ -2,6 +2,10 @@
 
 import { useState } from "react";
 
+import Header from "../../components/header"
+import Footer from '../../components/footer'
+
+
 export default function Market() {
   const [ticker, setTicker] = useState("");
   const [news, setNews] = useState([]);
@@ -56,7 +60,9 @@ export default function Market() {
   };
 
   return (
-    <div style={{ padding: "20px", maxWidth: "800px", margin: "0 auto" }}>
+    
+    <div style={{ maxWidth: "800px", margin: "0" }}>
+      <Header />
       <h1>Market Page</h1>
       <p>Enter a stock ticker to get the latest news and analyze sentiment.</p>
       <input
@@ -65,7 +71,6 @@ export default function Market() {
         onChange={(e) => setTicker(e.target.value)}
         placeholder="Enter stock ticker (e.g., AAPL)"
         style={{
-          padding: "10px",
           marginRight: "10px",
           width: "300px",
           fontSize: "16px",
@@ -74,6 +79,7 @@ export default function Market() {
       <button onClick={fetchNews} disabled={loading}>
         {loading ? "Loading..." : "Get News"}
       </button>
+      
 
       {news.length > 0 && (
         <div>
@@ -100,6 +106,7 @@ export default function Market() {
           </ul>
         </div>
       )}
+      
 
       {analysis && (
         <div>
@@ -108,8 +115,11 @@ export default function Market() {
             The article at <a href={analysis.url}>{analysis.url}</a> is{" "}
             <strong>{analysis.result}</strong>.
           </p>
+          
         </div>
       )}
+      
+      <Footer />
     </div>
   );
 }
