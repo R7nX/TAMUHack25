@@ -1,12 +1,40 @@
+/* Header Container */
 .header {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-  }
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* Stack title and nav vertically */
+  align-items: center; /* Center-align title and nav */
+  justify-content: center;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #3b82f6; /* Blue background for header */
+  color: white; /* White text */
+  border-bottom: 4px solid #2563eb; /* Add a decorative bottom border */
+}
 
-.nav{
-  display: grid;
-  grid-auto-flow : column;
+/* Title Styling */
+.title {
+  font-size: 2rem; /* Larger font for title */
   font-weight: bold;
+  margin-bottom: 10px; /* Space between title and nav */
+}
+
+/* Navigation Styling */
+.nav {
+  display: grid;
+  grid-auto-flow: column; /* Horizontal navigation layout */
+  gap: 20px; /* Space between links */
+  font-weight: bold;
+}
+
+/* Link Styling */
+.nav a {
+  color: white; /* White text for links */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.2rem;
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav a:hover {
+  color: #d1d5db; /* Light gray on hover */
 }

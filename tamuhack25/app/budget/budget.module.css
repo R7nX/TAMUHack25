@@ -1,56 +1,132 @@
+/* General Page Styles */
 .container {
   font-family: Arial, sans-serif;
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
+  background-color: #f7fafc;
+  min-height: 100vh;
 }
 
-.title {
+/* Hero Section */
+.hero {
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  color: white;
   text-align: center;
-  color: #333;
+  padding: 80px 20px;
 }
 
-.budgetInput input {
-  padding: 10px;
-  font-size: 16px;
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
-.budgetSummary p {
-  font-size: 16px;
-  margin: 5px 0;
+.hero p {
+  font-size: 1.2rem;
 }
 
-.expenseTracker form {
+/* Budget Input Section */
+.budgetInput {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.budgetInput h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.inputField {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+.budgetSummary {
   display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.budgetSummary div {
+  text-align: center;
+}
+
+.budgetSummary h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+/* Expense Tracker */
+.expenseTracker {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.expenseForm {
+  display: flex;
+  justify-content: center;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-.expenseList ul {
-  list-style: none;
-  padding: 0;
+.selectField {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
 }
 
-.expenseList li {
-  padding: 5px 0;
-  font-size: 16px;
+.addButton {
+  background-color: #3b82f6;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.progressSection .progressBar {
-  margin-bottom: 20px;
+.addButton:hover {
+  background-color: #2563eb;
 }
 
-.progressSection .bar {
+/* Progress Section */
+.progressSection {
+  margin: 40px 0;
+}
+
+.progressGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.progressCard {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.progressBar {
   width: 100%;
   height: 20px;
-  background: #f0f0f0;
+  background: #e5e7eb;
   border-radius: 10px;
   overflow: hidden;
+  margin: 10px 0;
 }
 
-.progressSection .filled {
+.filledBar {
   height: 100%;
-  border-radius: 10px 0 0 10px;
   transition: width 0.3s ease;
+}
+
+.warningText {
+  color: red;
+  font-size: 0.9rem;
 }
