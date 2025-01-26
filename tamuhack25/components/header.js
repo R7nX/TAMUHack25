@@ -25,6 +25,7 @@ const Header = () => {
         <Link href="/home">Home</Link>
         <Link href="/budget">Budget</Link>
         <Link href="/market">Market</Link>
+        <Link href="/compare">Compare</Link>
         {!isLoggedIn ? (
           <Link href="/login" className={styles.loginButton}>
             Login
