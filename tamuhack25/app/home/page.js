@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function DashboardLayout({ children }) {
+export default function DasLayout({ children }) {
     return (
       <html lang="en">
         <body>
